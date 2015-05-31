@@ -13,5 +13,13 @@
 
 			return ob_get_clean();
 		}
+		
+		protected function authAdmin()
+		{
+			if (!current_user_can("manage_options"))
+			{
+				wp_die(__("You do not have sufficient permissions to access this page."));
+			}
+		}
 	}
 ?>

@@ -4,7 +4,7 @@
 	
 	class AdminController extends Controller
 	{	
-		function __construct()
+		public function __construct()
 		{
 			add_action("admin_menu", array($this, "addToMenu"));
 		}
@@ -64,12 +64,5 @@
 			$this->index("Your changes were saved.");
 		}
 		
-		private function authAdmin()
-		{
-			if (!current_user_can("manage_options"))
-			{
-				wp_die(__("You do not have sufficient permissions to access this page."));
-			}
-		}
 	}
 ?>

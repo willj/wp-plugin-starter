@@ -3,7 +3,7 @@
 	
 	class SampleController extends Controller
 	{
-		function __construct()
+		public function __construct()
 		{
 			add_shortcode("mbw_starter_text", array($this, "showText"));	
 		}
