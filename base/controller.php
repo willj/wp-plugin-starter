@@ -1,7 +1,7 @@
 <?php	
 	namespace mbw\starter;
 
-	class Controller
+	abstract class Controller
 	{
 		protected function loadView($view_name, $data = array())
 		{
